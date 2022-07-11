@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/249597f40d.js"
+      crossorigin="anonymous"></script>
+    <title>MyBookSelf</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>KoleksiBuku</h1>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <div class="search_filter">
+        <div class="searchBar">
+          <input type="text" id="searchBar" placeholder="Cari Judul Buku" />
+          <label for="searchBar"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></label>
+        </div>
+      </div>
+      <div class="wrapper-inner">
+        <div class="container">
+          <h1 class="rakbuku">Rak Belum Dibaca</h1>
+          <div class="container-inner custom_scrollbar" id="bookList"></div>
+        </div>
+        <div class="container">
+          <h1 class="rakbuku">Rak Sudah Dibaca</h1>
+          <div
+            class="container-inner custom_scrollbar"
+            id="bookListCompleted"
+          ></div>
+        </div>
+      </div>
+      <label class="tambahBuku" for="tambahBuku"
+        ><i class="fa-solid fa-plus"></i
+      ></label>
+      <input class="checkboxHilang" type="checkbox" id="tambahBuku" />
+
+      <div class="overlay_tambah_data_buku" id="formTambahBuku">
+        <label class="exit" for="tambahBuku"
+          ><i class="fa-solid fa-xmark"></i
+        ></label>
+        <h1 id="form_title">Masukan Buku Baru</h1>
+        <form id="input_buku">
+          <div class="input">
+            <label for="title">Judul Buku</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+          <div class="input">
+            <label for="author">Pengarang Buku</label>
+            <input type="text" id="author" name="author" required />
+          </div>
+          <div class="form_tahun">
+            <div class="tahun">
+              <label for="year">Tahun</label>
+              <input
+                class="input_tahun"
+                type="number"
+                id="year"
+                name="year"
+                required
+              />
+            </div>
+            <div class="checkbox">
+              <label for="isCompleted">Sudah Dibaca</label>
+              <input type="checkbox" id="isCompleted" name="isCompleted" />
+            </div>
+          </div>
+          <button class="input_button" type="submit">Simpan</button>
+        </form>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="confirm" id="confirm">
+      <h1>Yakin Untuk Menghapus <span id="Judul_delete"></span> ?</h1>
+      <div>
+        <button id="hapus">Hapus</button>
+        <button id="kembali">Kembali</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+  <footer>
+    <small>Created By Yusuf Maulana</small>
+  </footer>
+</html>

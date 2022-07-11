@@ -1,0 +1,479 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  background: #0085ff;
+  width: 100%;
+  height: 71px;
+}
+
+header div {
+  max-width: 1280px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+}
+
+header h1 {
+  font-weight: normal;
+  font-size: 30px;
+  margin-left: 50px;
+  margin-top: 1.3%;
+  color: white;
+}
+
+.wrapper {
+  max-width: 1280px;
+  height: 650px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper-inner {
+  height: 600px;
+  max-width: 1280px;
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.search_filter {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 0px 20px;
+}
+
+.searchBar {
+  height: 40px;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid #0085ff;
+}
+
+.searchBar label {
+  margin-left: 10px;
+  color: #0085ff;
+}
+
+.searchBar input {
+  width: 300px;
+  height: 30px;
+  border: none;
+  font-size: 18px;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+.filter {
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.filter i {
+  color: #0085ff;
+  font-size: 30px;
+}
+
+.container {
+  width: 47%;
+  height: 80%;
+  background: white;
+  border-radius: 20px;
+  border: 3px solid #0085ff;
+  padding: 10px;
+}
+
+.container-inner {
+  width: 100%;
+  height: 95%;
+  overflow: auto;
+}
+
+.custom_scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom_scrollbar::-webkit-scrollbar-track {
+  visibility: hidden;
+}
+
+.custom_scrollbar::-webkit-scrollbar-thumb {
+  background: #0085ff;
+  border-radius: 10px;
+}
+
+.custom_scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #0767bf;
+}
+
+.konten {
+  width: 99%;
+  background: white;
+  margin: 10px auto;
+  border-radius: 20px;
+  border: 3px solid #0085ff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: start;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.konten:hover {
+  background: #f4f4f4;
+}
+
+.konten_child {
+  width: 70%;
+}
+
+.konten_child h1 {
+  font-size: 1.5rem;
+  margin-bottom: 7px;
+}
+
+.konten_child small {
+  font-size: 1.1rem;
+}
+
+.konten_child h2 {
+  font-size: 1.2rem;
+  color: #0085ff;
+  margin-bottom: 20px;
+}
+
+.sudah {
+  width: 120px;
+  height: 30px;
+  background: #70ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.belum {
+  width: 120px;
+  height: 30px;
+  background: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.konten_child i {
+  color: white;
+}
+
+.option_tanda_dibaca {
+  width: 150px;
+  display: flex;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 20%;
+}
+
+.fa-square-check {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.fa-rectangle-xmark {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.fa-gear {
+  font-size: 26px;
+  cursor: pointer;
+  color: #0767bf;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.tambahBuku {
+  width: 50px;
+  height: 50px;
+  background: #0085ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  cursor: pointer;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.fa-trash-can {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #0767bf;
+}
+
+.tambahBuku i {
+  color: white;
+  font-size: 35px;
+}
+
+.overlay_tambah_data_buku {
+  width: 35%;
+  height: 75%;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  border: 3px solid #0085ff;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  visibility: hidden;
+  transition: 0.2s;
+  z-index: 3;
+}
+
+.reveal {
+  bottom: 0px;
+  visibility: visible;
+  transition: 0.2s;
+}
+
+.overlay_tambah_data_buku h1 {
+  color: #0085ff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.input label {
+  color: #0085ff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.input input {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 40px;
+  border: 3px solid #0085ff;
+  font-size: 18px;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 0px 20px;
+}
+
+.form_tahun {
+  display: flex;
+}
+
+.form_tahun .tahun {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_tahun label {
+  color: #0085ff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form_tahun .input_tahun {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 40px;
+  border: 3px solid #0085ff;
+  font-size: 18px;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 0px 20px;
+}
+
+.checkbox {
+  width: 40%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  padding: 10px;
+  margin-left: 30px;
+}
+
+.checkbox label {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.checkbox input {
+  width: 20px;
+}
+
+.input_button {
+  width: 100%;
+  margin-top: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  background: #0085ff;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+}
+
+.input_button button:hover {
+  background: #0767bf;
+}
+
+.checkboxHilang {
+  visibility: hidden;
+}
+
+.exit {
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #0085ff;
+}
+
+.rakbuku {
+  color: #0085ff;
+  font-size: 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 70%;
+  background: transparent;
+  display: none;
+  z-index: 2;
+}
+
+.active {
+  display: block;
+}
+
+.confirm {
+  width: 50%;
+  height: 200px;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 100px;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 20px;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  border: 3px solid #0085ff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.confirm_ask {
+  visibility: visible;
+  transition: 0.2s;
+  bottom: 0px;
+}
+
+.confirm h1 {
+  font-size: 25px;
+}
+
+.confirm button {
+  width: 100px;
+  height: 50px;
+  margin: 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#hapus {
+  background: red;
+  color: white;
+  font-weight: bold;
+}
+
+#hapus:hover {
+  background: #e30000;
+}
+
+#kembali {
+  background: #70ff00;
+  color: white;
+  font-weight: bold;
+}
+
+#kembali:hover {
+  background: #66e205;
+}
+
+footer {
+  max-width: 1280px;
+  background: #0085ff;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+footer small {
+  color: white;
+}
